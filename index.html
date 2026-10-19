@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Para mi niña hermosa ❤</title>
   <style>
     * {
@@ -10,12 +11,13 @@
       box-sizing: border-box;
     }
     body {
-      font-family: 'Comic Sans MS';
+      font-family: 'Comic Sans MS', cursive, sans-serif;
       background-color: #fefefe;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 20px;
     }
     .portada {
       width: 400px;
@@ -92,7 +94,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-color: #ffffff;
+      background-color: rgba(255, 255, 255, 0.95);
       z-index: 10;
       justify-content: center;
       align-items: center;
@@ -104,6 +106,7 @@
       box-shadow: 0px 20px 30px rgba(0,0,0,0.2);
       border-radius: 10px;
       overflow: hidden;
+      background-color: white;
     }
     .hoja {
       width: 400px;
@@ -126,6 +129,11 @@
       color: #ff69b4;
       text-align: center;
       margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+    .hoja p {
+      margin-bottom: 12px;
+      line-height: 1.5;
     }
     .gif-cuaderno {
       display: block;
@@ -147,19 +155,26 @@
       z-index: 20;
     }
     @media (max-width: 850px) {
+      .portada {
+        width: 90vw;
+        max-width: 360px;
+        height: 550px;
+      }
       .cuaderno-abierto {
         flex-direction: column;
-        width: 90%;
-        height: auto;
+        width: 90vw;
+        height: 85vh;
       }
       .hoja {
         width: 100%;
-        height: 400px;
+        height: 50%;
       }
     }
   </style>
 </head>
 <body>
+
+  <!-- PORTADA DEL CUADERNO -->
   <div class="portada" id="portada" onclick="abrirCuaderno()">
     <div class="titulo">
       <span>N</span><span>O</span><span>T</span><span>E</span> BOOK
@@ -174,21 +189,23 @@
     <div class="inferior">hecho por alan</div>
   </div>
 
+  <!-- PAGINA INTERIOR (CUADERNO ABIERTO) -->
   <div id="paginaInterior">
     <button class="cerrar" onclick="cerrarCuaderno()">✿ Cerrar</button>
     <div class="cuaderno-abierto">
       <div class="hoja">
-        <h2>✧ Te adoro cielito✧</h2>
-        <p> Te conocí yno hubo amor a primera vista porque el amor no nace de un día sino que se enciende con cada palabra y mientras más te conocía más tenía la certeza de que algún día te amaría y que no habría manera de evitarlo porque eres un flechazo inmediato es algo más profundo como el pensamiento que ardía en mi al saber que algún día me enamoraría de ti como si esto, ya estuviera escrito </p>
-        <h2>TE ADORO MÁS DE LO QUE TE IMAGINAS</h2> 
-        <img class="gif-cuaderno" src="https://www.icegif.com/wp-content/uploads/2024/09/kuromi-icegif-10.gif">
+        <h2>✧ Te adoro cielito ✧</h2>
+        <p>Te conocí y no hubo amor a primera vista porque el amor no nace de un día, sino que se enciende con cada palabra. Mientras más te conocía, más tenía la certeza de que algún día te amaría y que no habría manera de evitarlo, porque eres un flechazo inmediato. Es algo más profundo, como el pensamiento que ardía en mí al saber que algún día me enamoraría de ti, como si esto ya estuviera escrito.</p>
+        <h2 style="margin-top: 20px;">TE ADORO MÁS DE LO QUE TE IMAGINAS</h2> 
+        <img class="gif-cuaderno" src="https://www.icegif.com/wp-content/uploads/2024/09/kuromi-icegif-10.gif" alt="Kuromi Gif">
       </div>
       <div class="hoja"> 
-        <h2>✧¡FELICES DOS MESESITOS CIELITO!✧</h2> 
-        <p>Podría pasar horas mirándote y aún así sentir que me faltó tiempo. Es que tus ojitos tiene una forma tan bonita de brillar que hacen que todo lo demás deje de importar. En ellos encuentro una calma que no sabía que existía, como si fuera el único lugar donde mi corazón realmente quisiera quedarse. Y tus labios, es difícil de explicar lo que provoca en mi, a veces sonríe y logra alegrarme todo el día entero; otras veces permanece en silencio, pero aún así dice más de lo que cualquier palabra podría expresar. No sé si alguna vez te has dado cuenta del efecto que tienes en mi, pero cada detalle tuyo se quedó viviendo en mis pensamientos. Si algún día me preguntan que fue lo más bonito que encontré en esta vida, no hablaré de lugares ni momentos; hablaré de esos ojitos que me enseñaron lo que es perderse con gusto, aquellos que cuidare con todo mi ser</p>
-        <p> Felices dos meses mi cielito. </p>
-        <p> Con amor,</p>
-        <p> Alan.</p>
+        <h2>✧ ¡FELICES DOS MESESITOS CIELITO! ✧</h2> 
+        <p>Podría pasar horas mirándote y aún así sentir que me faltó tiempo. Es que tus ojitos tienen una forma tan bonita de brillar que hacen que todo lo demás deje de importar. En ellos encuentro una calma que no sabía que existía, como si fuera el único lugar donde mi corazón realmente quisiera quedarse.</p>
+        <p>Y tus labios, es difícil de explicar lo que provocan en mí; a veces sonríen y logran alegrarme todo el día entero, otras veces permanecen en silencio pero aún así dicen más de lo que cualquier palabra podría expresar. No sé si alguna vez te has dado cuenta del efecto que tienes en mí, pero cada detalle tuyo se quedó viviendo en mis pensamientos.</p>
+        <p>Si algún día me preguntan qué fue lo más bonito que encontré en esta vida, no hablaré de lugares ni momentos; hablaré de esos ojitos que me enseñaron lo que es perderse con gusto, aquellos que cuidaré con todo mi ser.</p>
+        <p style="text-align: center; font-weight: bold; margin-top: 15px;">Felices dos meses mi cielito. ❤</p>
+        <p style="text-align: right; margin-top: 10px;">Con amor,<br><strong>Alan.</strong></p>
       </div>
     </div>
   </div>
